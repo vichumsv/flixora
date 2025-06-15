@@ -1,1 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap"); /*Font*/
 @import "tailwindcss";
+
+@theme {
+  --font-smooch-sans: "Smooch Sans", sans-serif;
+}
+
+body {
+  @apply font-smooch-sans;
+  color: #fff;
+  letter-spacing: 1px;
+}

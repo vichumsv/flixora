@@ -1,10 +1,15 @@
-// import React from "react";
-import Logo from "./images/logo.png";
+import React from "react";
+import Logo from "./logo/Logo";
+import Search from "./search/Search";
+
 const Header = () => {
   return (
-    <div>
-      <img src={Logo} alt="Logo" />
-    </div>
+    <>
+      <header className="p-2 pr-4 flex items-center justify-between bg-black">
+        <Logo />
+        <Search />
+      </header>
+    </>
   );
 };
 
