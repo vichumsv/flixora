@@ -2,8 +2,7 @@ import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; //Tanstack Query
-import { MoviesProvider } from "./components/data/MoviesContext.jsx"; //Movie Wraper
-import { GenresProvider } from "./components/data/GenreContext.jsx"; //Genre Wrapper
+import { MovieProvider } from "./context/MovieContext.jsx";
 
 import "./index.css";
 import "./app.css";
@@ -14,11 +13,9 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
-    <MoviesProvider>
-      <GenresProvider>
-        <App />
-      </GenresProvider>
+    <MovieProvider>
+      <App />
       <ReactQueryDevtools />
-    </MoviesProvider>
+    </MovieProvider>
   </QueryClientProvider>
 );
